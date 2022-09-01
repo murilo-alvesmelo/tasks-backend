@@ -6,6 +6,7 @@ const connect = require('connect');
 
 
 consign()
+    .include('./config/passport.js')
     .then('./config/middlewares.js')
     .then('./api')
     .then('./config/routes.js')
