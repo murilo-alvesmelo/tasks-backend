@@ -3,7 +3,7 @@ module.exports = app => {
     //auth routes
     app.post('/signup', app.api.user.save)
     app.post('/login', app.api.auth.login)
-
+    app.get('/users', app.api.user.findUser)
     //task routes
 
     //get e post
