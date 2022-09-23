@@ -11,17 +11,17 @@ module.exports = app => {
             .where('estimatedAt', '<=', date)
             .orderBy('estimatedAt')
             .then(tasks => res.json(tasks))
-            .catch(err => res.status(500).json(err))
+            .catch(err => res.status(400).json(err))
     }
 
-    const create = (req, res) =>{
+    const create = async (req, res) =>{
         if(!req.body.desc.trim()){
             return res.status(400).send("Descrição é um campo obrigatorio")
         }
 
         req.body.userId = req.user.id
 
-        app.db('tasks')
+        await app.db('tasks')
             .insert(req.body)
             .then(_ => res.status(204).send())
             .catch(err => res.status(400).send(err))

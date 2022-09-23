@@ -13,7 +13,7 @@ module.exports = app => {
         .post(app.api.task.create)    
 
     //delete
-    app.route('/task/:id')
+    app.route('/tasks/:id')
         .all(app.config.passport.authenticate())
         .delete(app.api.task.remove)
     
