@@ -4,7 +4,7 @@
  * @type { Object.<string, import("knex").Knex.Config> }
  */
 
-module.exports = {
+/* module.exports = {
     client: 'pg',
     connection: process.env.DATABASE_URL,
     pool: {
@@ -14,16 +14,12 @@ module.exports = {
     migrations: {
       directory: './migrations '
     }
-};
+}; */
 
-/* module.exports = {
+module.exports = {
 
-  client: 'postgresql',
-  connection: {
-    database: 'tasks',
-    user:     'postgres',
-    password: '1234'
-  },
+  client: 'pg',
+  connection: process.env.DATABASE_URL,
   pool: {
     min: 2,
     max: 10
@@ -32,4 +28,4 @@ module.exports = {
     tableName: 'knex_migrations'
   }
 
-}; */
+};
