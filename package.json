@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon",
-    "heroku-postbuild": "npm run"
+    "start": "node fileName.js",
+    "start:dev": "nodemon fileName.js"
   },
   "keywords": [],
   "author": "",
