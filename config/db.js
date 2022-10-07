@@ -1,4 +1,4 @@
-const config = require('../knexfile')[enviroment]
+const config = require('../knexfile')
 const knex = require('knex')(config)
 
 knex.migrate.latest([config])
