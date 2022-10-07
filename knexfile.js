@@ -4,14 +4,17 @@
  * @type { Object.<string, import("knex").Knex.Config> }
  */
 
- const prodConfig = Object.assign(
-  {},
-  { client: 'pg', connection: process.env.DATABASE_URL}
-)
-
 module.exports = {
-  production: prodConfig
-}
+    client: 'pg',
+    connection: process.env.DATABASE_URL,
+    pool: {
+      min: 2,
+      max: 10
+    },
+    migrations: {
+      directory: './migrations '
+    }
+};
 
 /* module.exports = {
 
