@@ -6,11 +6,7 @@
 
 module.exports = {
     client: 'pg',
-    connection: {
-      database: process.env.DATABASE,
-      user: process.env.USER,
-      password: process.env.PASSWORD,
-    },
+    connection: process.env.DATABASE_URL, ssl: true,
     pool: {
       min: 2,
       max: 10
