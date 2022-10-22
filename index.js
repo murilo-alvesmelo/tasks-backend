@@ -3,7 +3,7 @@ const app = express();
 const db = require('./config/db')
 const consign = require('consign')
 const connect = require('connect');
-
+const port = process.env.PORT || 3000;
 
 consign()
     .include('./config/passport.js')
@@ -14,6 +14,6 @@ consign()
 
 app.db = db
 
-app.listen(process.env.PORT || 3000, () =>{
-    console.log("Backend executando na porta...")
+app.listen(port, () =>{
+    console.log("Backend executando na porta...", port)
 }) 
