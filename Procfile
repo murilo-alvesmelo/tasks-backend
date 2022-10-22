@@ -1,1 +1,1 @@
-knex migrate:make create_table_users && knex migrate:make create_table_tasks && knex migrate:latest && node index.js
+knex migrate:latest && node index.js
