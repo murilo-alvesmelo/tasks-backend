@@ -12,7 +12,7 @@ module.exports = {
       diectory: __dirname + '/migrations',
     },
     seeds:{
-      directory: __dirname + '/config'
+      directory: __dirname + '/seeds'
     }
   }
 };
