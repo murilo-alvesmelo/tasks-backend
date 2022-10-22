@@ -6,7 +6,7 @@ const app = express()
 
 let dbConnectionConfig
 
-switch (process.env.NODE_ENV='production'){
+switch (process.env.NODE_ENV){
   case 'production':
     dbConnectionConfig = dbConfigObj.production
     break;
