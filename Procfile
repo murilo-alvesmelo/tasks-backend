@@ -1,1 +1,1 @@
-knex migrate:latest && node index.js
+node index.js
