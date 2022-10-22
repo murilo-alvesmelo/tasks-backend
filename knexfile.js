@@ -24,8 +24,7 @@
     client: 'pg',
     connection: process.env.DATABASE_URL,
     ssl: {
-      require: true, // This will help you. But you will see nwe error
-      rejectUnauthorized: false // This line will fix new error
+      rejectUnauthorized: false
     },
     pool: {
       min: 2,
