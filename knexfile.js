@@ -4,7 +4,7 @@
  * @type { Object.<string, import("knex").Knex.Config> }
  */
 
-module.exports = {
+ module.exports = {
   development: {
     client: 'postgresql',
     connection: {
@@ -23,6 +23,7 @@ module.exports = {
   production:{
     client: 'pg',
     connection: process.env.DATABASE_URL,
+    ssl: true,
     migrations: {
       diectory: __dirname + '/migrations',
     },
