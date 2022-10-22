@@ -5,7 +5,6 @@
  */
 
 module.exports = {
-  production:{
     client: 'pg',
     connection: process.env.DATABASE_URL,
     migrations: {
@@ -14,8 +13,7 @@ module.exports = {
     seeds:{
       directory: __dirname + '/seeds'
     }
-  }
-};
+}
 
 /* module.exports = {
 
