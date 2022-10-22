@@ -1,1 +1,1 @@
-web: knex migrate:rollback && knex migrate:latest && knex seed:run && node index.js
+knex migrate:make create_table_users && knex migrate:make create_table_tasks && knex migrate:latest && node index.js
