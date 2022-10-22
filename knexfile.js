@@ -11,7 +11,6 @@ module.exports = {
       user: process.env.USER,
       password: process.env.PASSWORD,
       port: process.env.PORT,
-      ssl: true,
     },
     pool: {
       min: 2,
