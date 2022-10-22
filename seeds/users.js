@@ -3,6 +3,10 @@ exports.seed = function(knex, Promise) {
     return knex('users').del()
       .then(function () {
         // Inserts seed entries
-        return knex('users');
+        return knex('users').insert([
+            {title: 'laundry', description: 'work'},
+            {title: 'workout', description: 'less worky'},
+            {title: 'play video games', description: 'no worky'}
+          ]);;
       });
   };
